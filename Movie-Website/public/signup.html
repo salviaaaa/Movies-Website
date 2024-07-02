@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- HTML document type declaration and the language used is English -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines the document character set as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Defines the viewport for creating responsive designs -->
+    <title>Sign Up</title> <!-- Title of the page to be displayed in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links external CSS files for styling -->
+    <link rel="stylesheet" href="swiper-bundle.min.css"> <!-- Links the Swiper CSS file for the slider component -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon"> <!-- Defines a favicon for a website -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Linking icons from Boxicons -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js""></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    
+</head>
+<body>
+    <img src="img/backgroundmoviesbisa.jpg" class="background-img"> 
+    <div class="form-container">
+        <form id="signup-form" class="form" >
+            <h2>Sign Up</h2>
+            
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email...">
+                    <span id="email-error" class="error"></span>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter your password..." id="password" class="input-field">
+                    <span id="password-error" class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" placeholder="Confirm your password..." id="confirm-password" class="input-field">
+                <span id="confirm-password-error" class="error"></span> <!-- Menambahkan span untuk pesan error confirm password -->
+            
+            <div class="form-group">
+                <button type="submit" id="submit-button">Sign Up</button>
+                <button type="reset" id="cancel-button">Cancel</button>
+            </div>
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+            <p>Cancel Sign Up, <a href="index.html">back</a></p>
+        </form>
+        
+    </div>
+           
+    <script src="signup.js"></script> <!-- Links external JavaScript files for additional functionality -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyA9VbnNYhHN8dxyIvYxKtrhuUTItOcCarw",
+          authDomain: "movieswebsite-22cc5.firebaseapp.com",
+          projectId: "movieswebsite-22cc5",
+          storageBucket: "movieswebsite-22cc5.appspot.com",
+          messagingSenderId: "516586921032",
+          appId: "1:516586921032:web:bcf0433586ae27822b8c7d"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Handle form submission
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            set(ref(database, 'users/' + email.replace('.', '_')), {
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword
+            }).then(() => {
+                alert('User SignUp successfully!');
+                window.location.href = "signin.html"; // Redirect to signin.html after successful registration
+            }).catch((error) => {
+                alert('Error signup user: ' + error.message);
+            });
+        });
+      </script>
+</body>
+</html>

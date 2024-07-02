@@ -1,0 +1,1102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Import the Poppins font from Google Fonts with various weight variations */
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+}
+/* Basic settings for all elements, including font, margin, padding, scroll behavior, and box model */
+
+:root {
+    --main-color: #55AD9B;
+    --hover-color: hsl(170, 98%, 26%);
+    --body-color: #1e1e2a;
+    --container-color: #2d2e37;
+    --text-color: #fcfeff;
+}
+/* CSS variables for main color, hover color, body background color, container background color, and text color */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+}
+/* Custom scrollbar styles for WebKit browsers (Chrome, Safari) */
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+/* Style the thumb (movable part) of the scrollbar */
+
+::selection {
+    background: var(--main-color);
+    color: var(--text-color);
+}
+/* Text selection style */
+
+a {
+    text-decoration: none;
+}
+/* Removes default decoration from links */
+
+li {
+    list-style: none;
+}
+/* Remove default list styles for <li> elements */
+
+section {
+    padding: 3rem 0 2rem;
+}
+/* General styling for <section> elements */
+
+img {
+    width: 100%;
+}
+/* Image will fill the width of its container */
+
+.bx {
+    cursor: pointer;
+}
+/* Custom style for elements with class 'bx', adding pointer cursor */
+
+body {
+    background: var(--body-color);
+    color: var(--text-color);
+}
+/* Basic style for body, setting background and text color */
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+   
+}
+/* Style for the main container in the layout, with maximum width and automatic margin settings */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--body-color);
+    z-index: 100;
+}
+/* Style for header that stays at the top of the page, with background and high z-index */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+}
+/* Settings for main navigation: flex layout, alignment, and content wrapping */
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+    
+    
+}
+/* Styles for logo with font size, text color, font weight, and text transformation */
+
+.logo span {
+    color: var(--main-color);
+}
+/* Custom style for the span in the logo */
+
+.search-box {
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 17px;
+    background: var(--container-color);
+    border-radius: 4rem;
+    position: absolute; /* Menambahkan absolute positioning */
+    top: 20px; /* Menyesuaikan jarak dari atas */
+    right: 80px; 
+    
+}
+/* Styles for search box with maximum size, full width, and flex layout */
+
+.search-box .bx {
+    font-size: 1.1rem;
+}
+/* Custom style for icon in search box */
+
+.search-box .bx:hover {
+    color: var(--main-color);
+}
+/* Hover effect for icons in search box */
+
+#search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+/* Styles for search input with various properties such as size, text color, and background */
+
+.user {
+    display: flex;
+}
+/* General styling for user containers, using flex layout */
+
+.user-img {
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+/* Styles for user images, including size, border-radius, and object settings */
+
+.navbar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.1rem;
+}
+/* Styles for navigation within the navbar, including fixed position, transformation, and column layout */
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b7b7b7;
+}
+/* Styles for links inside navigation, with column flex layout */
+
+.nav-link:hover,
+.nav-active {
+    color: var(--text-color);
+    transition: 0.3s all linear;
+    transform: scale(1.1);
+}
+/* Hover effects and styles for active links */
+
+.nav-link .bx {
+    font-size: 1.6rem;
+}
+/* Custom styles for icons in navigation links */
+
+.nav-link-title {
+    font-size: 0.7rem;
+}
+/* Styles for titles in navigation links */
+
+.home {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem !important;
+    border-radius: 0.5rem;
+}
+/* Styles for main page sections */
+
+.home-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+/* Style for background image on main page */
+
+.home-text {
+    padding-left: 40px;
+}
+/* Styles for text within the main page */
+
+.home-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* Style for title on main page */
+
+.home-text p {
+    font-size: 0.938rem;
+    margin: 10px 0 20px;
+    color: var(--main-color);
+}
+/* Styles for paragraphs on the main page */
+
+.watch-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    color: var(--text-color);
+    
+}
+/* Style for watch button */
+
+.watch-btn .bx {
+    font-size: 22px;
+    background: var(--main-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+/* Custom style for icons in watch buttons */
+
+.watch-btn .bx:hover {
+    background: var(--hover-color);
+}
+/* Hover effect for icons in watch buttons */
+
+.watch-btn span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.play-movie {
+    display: flex;
+    color: #fff; /* Warna teks */
+    align-items: center;
+    column-gap: 0.8rem;
+   
+}
+
+
+
+.bx.bx-right-arrow.play-movie {
+    font-size: 22px;
+    background: var(--main-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 2s linear infinite;
+    color: #fff; /* Warna ikon */
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+.play-movie span {
+    color: #fff; /* Warna teks */
+    font-size: 16px;
+}
+/* Styles for text in watch button */
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--container-color);
+    padding: 8px 14px;
+    border: 1px solid hsl(200 100% 99% / 5%);
+    margin-bottom: 2rem;
+}
+/* Style for title in heading section */
+
+.heading-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/* Styles for titles in headings */
+
+.movie-box {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+/* Style for movie box */
+
+.movie-box-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Style for image in movie box */
+
+.movie-box .box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    background: linear-gradient(
+        8deg,
+        hsl(240 17% 14% / 74%) 14%,
+        hsl(240 17% 14% / 14%) 44%
+    );
+    overflow: hidden;
+}
+/* Style for overlay text inside movie box */
+
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+/* Style for movie title in movie box */
+
+.movie-type {
+    font-size: 0.938rem;
+}
+/* Style for type of movie in movie box */
+
+.play-btn {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+}
+/* Style for play button inside movie box */
+
+.swiper-btn {
+    display: flex;
+}
+/* General style for swiper navigation buttons */
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: static !important;
+    margin: 0 0 0 10px !important;
+}
+/* Styles for next and previous navigation buttons in swiper */
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: var(--text-color);
+    font-size: 18px !important;
+    font-weight: 700;
+}
+/* Style for arrow icons in swiper navigation buttons */
+
+.movies .heading {
+    padding: 10px 14px;
+}
+/* Style for title in movies section */
+
+/* Styles for movie content with responsive grid layout */
+.movies-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Hover effect for image in movie box when cursor hovered */
+.movies-content .movie-box:hover .movie-box-img {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* Style for next page navigation */
+.next-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Style for next page button */
+.next-btn {
+    background: var(--main-color);
+    padding: 12px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Hover effect for next page button */
+.next-btn:hover {
+    background: var(--hover-color);
+    transition: 0.3s all linear;
+}
+
+/* Styles for copyright */
+.copyright {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styles for movie playback containers */
+.play-container {
+    position: relative;
+    min-height: 540px;
+    margin-top: 5rem !important;
+}
+
+/* Style for background image in movie playback container */
+.play-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+/* Style for overlay text in movie playback container */
+.play-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    background: linear-gradient(
+        8deg,
+        hsl(240 17% 14% / 74%) 14%,
+        hsl(240 17% 14% / 14%) 44%
+    );
+}
+
+/* Styles for titles inside the movie playback container */
+.play-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Style for movie ratings */
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    margin-top: 4px;
+}
+
+/* Styles for movie tags */
+.tags {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin: 1rem 0;
+}
+
+/* Styles for tags inside movie tags */
+.tags span {
+    background: var(--container-color);
+    padding: 0 4px;
+}
+
+
+/* Animation for playback button */
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgb(255, 180, 50, 0.7);
+    }
+    40% {
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    80% {
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 rgb(255, 193, 7, 0);
+    }
+}
+
+/* Styles for overlay video containers */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: hsl(234 10% 20% / 60%);
+    z-index: 400;
+}
+
+/* Additional styles to display overlay video containers */
+.video-container.show-video {
+    display: flex;
+}
+
+/* Styles for the video box inside the overlay video container */
+.video-box {
+    position: relative;
+    width: 70%;
+}
+
+/* Styles for videos inside the video overlay box */
+.video-box #myvideo {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+/* Style for the video close button inside the overlay video container */
+.close-video {
+    position: absolute;
+    top: -3brakes;
+    right: 0;
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+/* Style for section about movies */
+.about-movie {
+    margin-top: 2rem !important;
+}
+
+/* Styles for titles in the about movie section */
+.about-movie h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+/* Styles for paragraph text in the about movie section */
+.about-movie p {
+    max-width: 600px;
+    font-size: 0.938rem;
+    margin: 10px 0;
+}
+
+/* Style for title in cast section */
+.cast-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+/* Style for cast grid */
+.cast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+    gap: 1 brake;
+}
+
+/* Styles for cast images */
+.cast-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for cast titles */
+.cast-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Style for cast links */
+.cast-box a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for cast links */
+.cast-box a:hover {
+    color: var(--hover-color);
+}
+
+/* Style for cast link text */
+.cast-box a span {
+    display: block;
+    word-wrap: break-word;
+    
+    margin-bottom: 0.5rem;
+}
+
+/* Style for download section */
+.download {
+    max-width: 800px;
+    width: 100%; /* Needs to be revised to width: 100%; */
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Style for title in download section */
+.download-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 1.6rem 0;
+    color: var(--main-color);
+}
+
+/* Style for download link */
+.download-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+/* Style for download link */
+.download-links a {
+    text-align: center;
+    background: var(--main-color);
+    padding: 12px 24px;
+    color: var(--body-color);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Hover effect for download link */
+.download-links a:hover {
+    background: var(--hover-color);
+}
+
+@media (max-width: 1170px) {
+    .navbar {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: translateY(0);
+        flex-direction: row;
+        justify-content: space-evenly;
+        row-gap: 1px;
+        padding: 10px;
+        border-top: 1px solid hsl(200 100% 99% / 5%);
+        background: linear-gradient(
+            8deg,
+            hsl(240 17% 14% / 100%) 5%,
+            hsl(240 17% 14% / 90%) 100%
+        );
+    }
+
+    /* Styles for icons in navigation links in navbar */
+    .nav-link .bx {
+        font-size: 1.5rem;
+    }
+
+    /* Style for bottom margin in copyright */
+    .copyright {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 1060px) {
+    /* Media query for screen widths up to 1060px */
+    .container {
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Media query for screen widths up to 991px */
+    .nav {
+        padding: 35px 0 !important; 
+    }
+    .movie-box {
+        height: 340px;
+    }
+
+    .movies-content {
+        grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+    }
+}
+
+@media (max-width: 888px) {
+    /* Media query for screen widths up to 888px */
+    .nav {
+        padding: 35px 0 !important;
+    }
+
+    .home {
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+
+    .home-text {
+        padding-left: 25px;
+    }
+
+    .home-title {
+        font-size: 1.6rem;
+    }
+
+    .watch-btn span {
+        font-size: 0.9rem;
+    }
+
+    .movie-title {
+        font-size: 1rem;
+        padding-right: 30px;
+    }
+
+    .play-container {
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+
+
+    .cast {
+        justify-content: center;
+
+}
+}
+
+@media (max-width: 768px) {
+    /* Media query for screen widths up to 768px */
+    .nav {
+        padding: 11px 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .home-img {
+        object-position: left;
+    }
+
+    .movie-type {
+        font-size: 0.875rem;
+        margin-top: 2px;
+    }
+
+    .tags span,
+    .about-movie p {
+        font-size: 0.875rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .play-text h2,
+    .about-movie h2 {
+        font-size: 1.3rem;
+    }
+
+    
+}
+
+@media (max-width: 514px) {
+    /* Media query for screen widths up to 514px */
+    .home {
+        min-height: 380px;
+    }
+
+    .heading {
+        padding: 2px 14px;
+    }
+
+    .heading-title {
+        font-size: 1rem;
+    }
+
+    .play-text {
+        padding: 20px;
+    }
+
+    
+
+    .video-box {
+        width: 94%;
+    }
+
+    .cast-heading {
+        font-size: 1.1rem;
+    }
+
+    .cast-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 404px) {
+    /* Media query for screen widths up to 404px */
+    * {
+        scroll-padding-top: 5rem;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5px;
+    }
+
+    .search-box {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 4px;
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .home,
+    .play-container {
+        margin-top: 7rem !important;
+    }
+
+    .movie-box {
+        height: 300px;
+    }
+
+    .movies-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1 brake;
+    }
+}
+
+@media (max-width: 370px) {
+    /* Media query for screen widths up to 370px */
+    .home {
+        min-height: 300px;
+    }
+
+    .movie-box {
+        height: 285px;
+    }
+
+    .user-img,
+    .watch-btn .bx {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+        padding: 8px 0;
+    }
+
+    .nav-link .bx {
+        font-size: 1.4rem;
+    }
+
+    .about-movie p {
+        text-align: justify;
+    }
+
+    .download-links {
+        grid-template-columns: 1fr;
+    }
+}
+/* form signup & signin */
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5); /* Optional: to darken the background image for better text visibility */
+}
+
+/* form container */
+.form-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for the form */
+    box-shadow: 0 0 10px rgba(32, 22, 22, 0.5);
+    
+   
+}
+
+
+input[type="email"], input[type="password"], input[type="confirm-password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.error  {
+    color: red;
+    display: none;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.valid  {
+    border-color: green;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+#cancel-button {
+    background-color: #e74c3c; /* Red color for cancel button */
+    margin-top: 10px;
+}
+
+#cancel-button:hover {
+    background-color: #c0392b;
+}
+
+
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 95%;
+        margin: 30% auto;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+.validation {
+    
+    color: red; /* Warna teks pesan validasi */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.validation {
+    display: block; /* Tampilkan pesan validasi jika ada kesalahan */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.membership h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.membership p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: var(--hover-color);
+}
+
+
+
+
+
+
+
+
+

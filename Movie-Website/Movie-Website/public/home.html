@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- HTML document type declaration and the language used is English -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines the document character set as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Defines the viewport for creating responsive designs -->
+    <title>Responsive Movies Website</title> <!-- Title of the page to be displayed in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links external CSS files for styling -->
+    <link rel="stylesheet" href="swiper-bundle.min.css"> <!-- Links the Swiper CSS file for the slider component -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon"> <!-- Defines a favicon for a website -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Linking icons from Boxicons -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js""></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    
+</head>
+<body>
+
+<header> <!-- Header section of the page -->
+    <div class="nav container"> <!-- Main navigation in a container -->
+        <a href="home.html" class="logo"> <!-- Link to the main page with the logo -->
+            Movie<span>sbisa</span> <!-- Logo with text, "Movie" and "sbisa" displayed differently -->
+        </a>
+        <div class="search-box"> <!-- Search box to search for movies -->
+            <input type="search" name="" id="search-input" placeholder="Search movie"> <!-- Input text for search -->
+            <i class='bx bx-search'></i> <!-- Search icon from Boxicons -->
+        </div>
+
+        <a href="index.html" class="user"> <!-- Link to the user's profile page -->
+            <img src="img/user.jpg" alt="" class="user-img"> <!-- User profile picture -->
+        </a>
+        <div class="navbar"> <!-- Main navigation in header -->
+            <a href="#home" class="nav-link nav-active"> <!-- Link to the home section with active status -->
+                <i class='bx bx-home'></i> <!-- Home icon from Boxicons -->
+                <span class="nav-link-title">Home</span> <!-- Label text for the home link -->
+            </a>
+            <a href="#popular" class="nav-link"> <!-- Link to popular section -->
+                <i class='bx bxs-hot'></i> <!-- Trending icons from Boxicons -->
+                <span class="nav-link-title">Trending</span> <!-- Label text for trending links -->
+            </a>
+            <a href="#movies" class="nav-link"> <!-- Link to the explore section -->
+                <i class='bx bx-compass'></i> <!-- Explore icon from Boxicons -->
+                <span class="nav-link-title">Explore</span> <!-- Label text for the explore link -->
+            </a>
+            <a href="play-page.html" class="nav-link"> <!-- Link to the play page -->
+                <i class='bx bx-tv'></i> <!-- TV icon from Boxicons -->
+                <span class="nav-link-title">Movies</span> <!-- Label text for movies link -->
+            </a>
+            <a href="#home" class="nav-link"> <!-- Link to favorite section -->
+                <i class='bx bx-heart'></i> <!-- Heart icon from Boxicons -->
+                <span class="nav-link-title">Favorite</span> <!-- Label text for favorite link -->
+            </a>
+        </div>
+    </div>
+</header>
+<section class="home container" id="home"> <!-- Home section with container -->
+    <img src="play-page/jumanjibackground.jpg" alt="" class="home-img"> <!-- Background image for the home section -->
+    <div class="home-text"> <!-- Text in the home section -->
+        <h1 class="home-title">Jumanji <br> Welcome To The Jungle </h1> <!-- Main movie title shown -->
+        <p>Releasing April 10</p> <!-- Film release date text -->
+        <a href="play-page.html" class="watch-btn"> <!-- Button to watch trailer -->
+            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+            <span>Watch the trailer</span> <!-- Text on the watch the trailer button -->
+        </a>
+    </div>
+</section>
+
+<section class="popular container" id="popular"> <!-- Popular movies section with container -->
+    <div class="heading"> <!-- Heading section for popular sections -->
+        <h2 class="heading-title">Popular Movies</h2> <!-- Title of the popular movies section -->
+        <div class="swiper-btn"> <!-- Navigation buttons for swiper -->
+            <div class="swiper-button-prev"></div> <!-- Previous button for swiper -->
+            <div class="swiper-button-next"></div> <!-- Next button for swiper -->
+        </div>
+    </div>
+    <div class="popular-content swiper"> <!-- Popular content that uses swiper -->
+        <div class="swiper-wrapper"> <!-- Wrapper for each slide in swiper -->
+            <div class="swiper-slide"> <!-- First slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-1.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Spider-Man: No Way Home</h2> <!-- Movie title -->
+                        <span class="movie-type">Action</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Second slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-2.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Jungle Cruise</h2> <!-- Movie title -->
+                        <span class="movie-type">Action/Adventure</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Third slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-3.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Loki</h2> <!-- Movie title -->
+                        <span class="movie-type">Action</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Fourth slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-4.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Squid Game</h2> <!-- Movie title -->
+                        <span class="movie-type">Action/Drama</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Fifth slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-5.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">The Falcon and the Winter Soldier</h2> <!-- Movie title -->
+                        <span class="movie-type">Action</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Sixth slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-6.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Hawkeye</h2> <!-- Movie title -->
+                        <span class="movie-type">Action</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Seventh slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-7.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">Agents of SHIELD</h2> <!-- Movie title -->
+                        <span class="movie-type">Action</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide"> <!-- Eighth slide in swiper -->
+                <div class="movie-box"> <!-- Movie box -->
+                    <img src="img/popular-movie-8.jpg" alt="" class="movie-box-img"> <!-- Popular movie images -->
+                    <div class="box-text"> <!-- Text in movie box -->
+                        <h2 class="movie-title">The Flash</h2> <!-- Movie title -->
+                        <span class="movie-type">Action/Sci-Fi</span> <!-- Movie genre -->
+                        <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                            <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="movies container" id="movies"> <!-- Movies and shows section with containers -->
+    <div class="heading"> <!-- Heading section for the movies and shows section -->
+        <h2 class="heading-title">Movies And Shows</h2> <!-- Movies and shows section title -->
+    </div>
+    <div class="movies-content"> <!-- Content for the movies and shows section -->
+        <div class="movie-box"> <!-- First movie box -->
+            <img src="img/movie-1.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Jumanji: Welcome to the Jungle</h2> <!-- Movie title -->
+                <span class="movie-type">Action</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Second movie box -->
+            <img src="img/movie-2.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Hitman's Wife's Bodyguard</h2> <!-- Movie title -->
+                <span class="movie-type">Action/Comedy</span> <!-- Film genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Third movie box -->
+            <img src="img/movie-3.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Shang-Chi</h2> <!-- Movie title -->
+                <span class="movie-type">Action/Sci-Fi</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Fourth movie box -->
+            <img src="img/movie-4.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Eternals</h2> <!-- Movie title -->
+                <span class="movie-type">Action/Sci-Fi</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Fifth movie box -->
+            <img src="img/movie-5.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Spectre</h2> <!-- Movie title -->
+                <span class="movie-type">Action</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Sixth movie box -->
+            <img src="img/movie-6.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Money Heist</h2> <!-- Movie title -->
+                <span class="movie-type">Action</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Seventh movie box -->
+            <img src="img/movie-7.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">The Wolverine</h2> <!-- Movie title -->
+                <span class="movie-type">Action/Sci-Fi</span> <!-- Movie genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+        <div class="movie-box"> <!-- Eighth movie box -->
+            <img src="img/movie-8.jpg" alt="" class="movie-box-img"> <!-- Movie image -->
+            <div class="box-text"> <!-- Text in movie box -->
+                <h2 class="movie-title">Johnny English</h2> <!-- Movie title -->
+                <span class="movie-type">Action/Comedy</span> <!-- Film genre -->
+                <a href="#" class="watch-btn play-btn"> <!-- Button to watch trailer -->
+                    <i class='bx bx-right-arrow'></i> <!-- Right arrow icon from Boxicons -->
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="copyright"> <!-- Copyright section -->
+    <p>&#169; Project3CCIT All Right Reserved</p> <!-- Copyright text -->
+</div>
+
+<script src="swiper-bundle.min.js"></script> <!-- Linking JavaScript files for Swiper -->
+<script src="main.js"></script> <!-- Links external JavaScript files for additional functionality -->
+</body>
+</html>
+
+
